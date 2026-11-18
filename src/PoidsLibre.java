@@ -1,7 +1,7 @@
 public class PoidsLibre extends Equipements {
     private TypePoids type;
-    public PoidsLibre(String nom, float poids, TypePoids type) {
-        super(nom, poids);
+    public PoidsLibre(String marque, float poids, TypePoids type) {
+        super(marque, poids);
         this.type = type;
     }
 

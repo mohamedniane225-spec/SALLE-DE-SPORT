@@ -43,9 +43,9 @@ JAMBES}
 class TypePoid{
         <<enum>>
         KETEBELL
-        DISQUES
-    }
-Personne <|-- Coach
+        DISQUES }
+        
+        Personne <|-- Coach
     Personne <|-- Adherents
     Personne <|-- Adherent
     Gym "1"*--"1...*" Salle

@@ -1,8 +1,9 @@
-public class Machine extends Equipements {
+public class Machine extends Equipements implements Reservable {
     private GroupeMusculaire groupe;
     private EtatMachine etat;
-    public Machine(String nom, float poids, GroupeMusculaire groupe, EtatMachine etat) {
-        super(nom, poids);
+    private boolean disponible=true;
+    public Machine(String marque, float poids, GroupeMusculaire groupe, EtatMachine etat) {
+        super(marque, poids);
         this.groupe = groupe;
         this.etat = etat;
     }
@@ -14,4 +15,29 @@ public class Machine extends Equipements {
     public void setGroupe(GroupeMusculaire groupe) {
         this.groupe = groupe;
     }
+
+    public EtatMachine getEtat() {
+        return etat;
+    }
+
+    public void setEtat(EtatMachine etat) {
+        this.etat = etat;
+    }
+
+    public void RendreDisponible(){
+        disponible=true;
+    }
+    @Override
+    public boolean reserver(){
+        if(!disponible){
+            return false;
+        }
+        if(etat==EtatMachine.MAINTENANCE){
+            disponible=false;
+        }
+        disponible=false;
+        return true;
+    }
+
+
 }

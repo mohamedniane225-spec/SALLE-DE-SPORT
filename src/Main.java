@@ -1,8 +1,8 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Main {
-    public static void main(String[] args) {
 
 
-    }}
+void main(){
+   Machine M= new Machine("DECATHLON",15, GroupeMusculaire.BICEPS,EtatMachine.OPERATIONELLE );
+    System.out.println(M);}
+
+Salle s
+

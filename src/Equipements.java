@@ -1,14 +1,14 @@
 public abstract class Equipements  {
-    private String nom;
+    private String marque;
     private float poids;
-    public Equipements(String nom, float poids) {
+    public Equipements(String marque, float poids) {
         if(poids <= 0 ) {
             throw new IllegalArgumentException("L'age doit etre strictement positif !");
         }
-        if(nom==null){
+        if(marque==null){
             throw new IllegalArgumentException("Le nom est vide !");
         }
-        this.nom = nom;
+        this.marque=marque;
         this.poids = poids;
     }
 
@@ -21,12 +21,19 @@ public abstract class Equipements  {
     }
 
     public String getNom() {
-        return nom;
+        return marque;
     }
 
     public void setNom(String nom) {
-        this.nom = nom;
+        this.marque = nom;
     }
 
+    @Override
+    public String toString() {
+        return "Equipements{" +
+                "marque='" + marque + '\'' +
+                ", poids=" + poids +
+                '}';
+    }
 }
 

@@ -1,4 +1,4 @@
 public enum EtatMachine {
-    NEUVE,
-    VIELLE
+    MAINTENANCE,
+    OPERATIONELLE
 }
